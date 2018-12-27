@@ -1,21 +1,63 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Nordstrom Notes</title>
-  </head>
-  <body>
-    <h1>Nordstrom Notes!</h1>
-    <button id="getNotes"> Get Notes</button>
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <meta charset="utf-8">
+  <title>Nordstrom Notes</title>
+</head>
+<body>
+  <!-- Dropdown Structure -->
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a href="#!">Newest</a></li>
+    <li><a href="#!">Oldest</a></li>
+    <li class="divider"></li>
+  </ul>
+  <ul id="dropdown2" class="dropdown-content">
+    <li><a href="#!">Hobby</a></li>
+    <li><a href="#!">Work</a></li>
+    <li class="divider"></li>
+    <li><a href="#!">Personal</a></li>
+  </ul>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Nordstrom Notes</a>
+      <ul class="right hide-on-med-and-down">
+        <!-- Dropdown Trigger -->
+        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Filter By Date<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Filter By Tag<i class="material-icons right">arrow_drop_down</i></a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <button id="postNote"> Post A Note</button>
+  </div>
+  <form id="addPost" class="container">
+    <div class="dropdownTags">
+      <label>Tag</label>
+      <select class="browser-default">
+        <option value="" disabled selected>Choose your Tag</option>
+        <option value="1">Hobby</option>
+        <option value="2">Work</option>
+        <option value="3">Personal</option>
+      </select>
+    </div>
 
-    <script type="text/javascript" src="
-    ./app.js">
+    <div >
+      <textarea id="body" placeholder="Enter Your Message"></textarea>
+    </div>
+    <div >
+      <input type="submit" value="submit">
+    </div>
+  </form>
 
-    </script>
-    <script
-  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
-  crossorigin="anonymous">
-    </script>
-  </body>
+  <div id="output" class="container">
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script type="text/javascript" src="./app.js">
+  </script>
+</body>
 </html>
