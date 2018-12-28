@@ -1,0 +1,13 @@
+#addNote{
+  width:300px;
+  height: 200px;
+}
+
+#postButton{
+  padding-top: 2em;
+  text-align: center;
+}
+
+.title{
+  padding-left: 1em;
+}
