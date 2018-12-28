@@ -10,30 +10,29 @@
 <body>
   <nav>
     <div class="nav-wrapper teal lighten-2">
-      <a href="#!" class="brand-logo title">Nordstrom Notes</a>
+      <a href="#!" class="brand-logo">Nordstrom Notes</a>
     </div>
   </nav>
   <div class="container" id="postButton">
-    <!-- <a id="postNote" class="waves-effect waves-light btn-large">Post A Note</a> -->
   </div>
   <form id="addNote" class="container">
     <div class="dropdownTags">
       <select id="postTag">
-        <option value="" disabled selected>Choose your Tag</option>
+        <option value="" disabled selected>Choose Your Tag</option>
         <option  value="1">Hobby</option>
         <option  value="2">Work</option>
         <option  value="3">Personal</option>
       </select>
     </div>
-    <div>
-      <textarea id="body" placeholder="Enter Your Message"></textarea>
+    <div class="input-field">
+      <textarea id="textarea2" class="materialize-textarea messageBody" data-length="250" placeholder="Enter Your Message"></textarea>
     </div>
     <div >
-      <input id="submitNote" class="waves-effect waves-light btn-large" type="submit" value="Post a Note">
+      <input id="submitNote" class="waves-effect waves-light btn-small" type="submit" value="Post A Note">
     </div>
   </form>
   <div class="filters container">
-    <h2 class="noteTitle container">Notes</h2>
+    <h2 class="noteTitle">Notes</h2>
     <select id="filterTag">
       <option value="" disabled selected>Filter By Tag</option>
       <option value="1">Hobby</option>
@@ -41,7 +40,7 @@
       <option value="3">Personal</option>
     </select>
 
-    <input id="submitTag" class="waves-effect waves-light btn-large" type="submit" value="Filter Tag">
+    <input id="submitTag" class="waves-effect waves-light btn-small" type="submit" value="Filter Tag">
 
     <select id="filterDate">
       <option value="" disabled selected>Filter By Date</option>
@@ -49,16 +48,14 @@
       <option value="2">Oldest</option>
     </select>
 
-    <input id="submitDate" class="waves-effect waves-light btn-large" type="submit" value="Filter Date">
+    <input id="submitDate" class="waves-effect waves-light btn-small" type="submit" value="Filter Date">
   </div>
-
   <div id="output" class="container">
-
   </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script type="text/javascript" src="./app.js">
+  <script type="text/javascript" src="./lib/app.js">
   </script>
 </body>
 </html>
